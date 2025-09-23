@@ -327,6 +327,10 @@
     }
 }
 @media (max-width: 768px){
+    #motivation-section {
+        background-attachment: scroll;
+    }
+    
     #motivation-section h2{
         font-size: 72px;
     }
