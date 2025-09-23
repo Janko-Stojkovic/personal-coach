@@ -330,7 +330,7 @@
     #motivation-section {
         background-attachment: scroll;
     }
-    
+
     #motivation-section h2{
         font-size: 72px;
     }
@@ -340,6 +340,11 @@
     }
     #statistics-section h3{
         width: 100%;
+    }
+}
+@media (max-width:460px){
+    #motivation-section h2{
+        font-size: 46px;
     }
 }
 
