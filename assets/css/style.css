@@ -11,6 +11,31 @@
     border: 1px solid #00c6c2;
 }
 
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #00c6c2; /* tvoja plava boja */
+    color: #000; /* crna strelica */
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 3;
+}
+
+.back-to-top:hover {
+    opacity: 0.85;
+    transform: translateY(-3px);
+}
+
 .btn-outline-primary:hover, .btn-outline-primary:focus, .btn-outline-primary:focus-visible, .btn-outline-primary:active{
     background-color: #00c6c2!important;
     color: #fff!important;
@@ -31,14 +56,21 @@
 
 .navbar-scroll {
     transition: background-color 0.3s, box-shadow 0.3s;
-    background-color: #fff !important; 
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: #0D0D0D !important; 
+    box-shadow: 0px 0px 25px 30px rgba(13, 13, 13, 1);
 }
 
 #navbar{
     position: fixed;
     z-index: 10;
     width: 100%;
+    background-color: #0D0D0D !important; 
+    box-shadow: 0px 0px 25px 30px rgba(13, 13, 13, 1);
+}
+
+#navbar .navbar-brand{
+    font-size: 36px;
+    font-weight: 600;
 }
 
 #navbar .nav-item .nav-link{
@@ -47,6 +79,14 @@
     color: #00c6c2;
     text-decoration: none; /* ukloni default underline */
     padding-bottom: 5px;  
+}
+
+.navbar-toggler {
+  border: 1px solid #00c6c2 !important;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 198, 194, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
 #navbar .nav-item .nav-link::after {
@@ -212,7 +252,7 @@
     position: relative;
 }
 
-#team-section .team-card {
+#team-section .team-card, #testimonials-section .owl-item .item{
     transition: transform 0.3s, box-shadow 0.3s;
     box-shadow: 0px 0px 19px 7px rgba(33,37,41,0.69)!important;
     -webkit-box-shadow: 0px 0px 19px 7px rgba(33,37,41,0.69)!important;
@@ -239,6 +279,7 @@
 
 #statistics-section h3{
     font-size: 36px;
+    width: 60%;
 }
 
 #statistics-section h2{
@@ -261,6 +302,41 @@
     color: #fff;
 }
 
+#testimonials-section{
+    background-color: #0D0D0D;
+}
 
+#testimonials-section h2{
+    color: #fff;
+}
+#testimonials-section .owl-item .item{
+    color: #fff;
+}
+#testimonials-section .owl-item .item h6{
+    margin-top: 20px;
+}
+.owl-carousel .owl-item img{
+    width: 120px!important;
+    height: 120px;
+    margin: 0 auto;
+}
+
+@media (max-width: 992px){
+    #statistics-section h3{
+        width: 85%;
+    }
+}
+@media (max-width: 768px){
+    #motivation-section h2{
+        font-size: 72px;
+    }
+    #motivation-section .btn-motivation{
+        padding: 10px 60px;
+        font-size: 21px;
+    }
+    #statistics-section h3{
+        width: 100%;
+    }
+}
 
 

@@ -1,4 +1,5 @@
 const navbar = document.getElementById('navbar');
+const backToTop = document.getElementById("backToTop");
 
 window.addEventListener('scroll', () => {
     if (window.scrollY > 50) { // kada skroluješ više od 50px
@@ -6,7 +7,18 @@ window.addEventListener('scroll', () => {
     } else {
         navbar.classList.remove('fixed-top', 'navbar-scroll');
     }
+
+    if (window.scrollY > 150) {
+      backToTop.style.display = "flex";
+    } else {
+      backToTop.style.display = "none";
+    }
 });
+
+backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
 
 document.addEventListener("DOMContentLoaded", () => {
   const counters = document.querySelectorAll(".count");
@@ -40,4 +52,26 @@ document.addEventListener("DOMContentLoaded", () => {
   }, { threshold: 0.5 });
 
   observer.observe(document.querySelector("#statistics-section"));
+});
+
+
+
+  
+
+
+
+$(document).ready(function(){
+    $(".owl-carousel").owlCarousel({
+        loop:true,
+        margin:20,
+        nav:false,
+        dots:true,
+        autoplay:true,
+        autoplayTimeout:4000,
+        responsive:{
+            0:{ items:1 },
+            768:{ items:2 },
+            992:{ items:3 }
+        }
+    });
 });
