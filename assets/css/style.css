@@ -329,6 +329,7 @@
 @media (max-width: 768px){
     #motivation-section {
         background-attachment: scroll;
+        background-position: center;
     }
 
     #motivation-section h2{
