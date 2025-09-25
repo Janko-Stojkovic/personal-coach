@@ -54,11 +54,19 @@ document.addEventListener("DOMContentLoaded", () => {
   observer.observe(document.querySelector("#statistics-section"));
 });
 
+// MODALS FOR VIDEO SECTION 
+const videoUrl = "https://www.youtube.com/embed/jnLSYfObARA?si=CyokD6JmnDcUJZ6g";
 
+const videoModal = document.getElementById("videoModal");
+const iframe = document.getElementById("youtubeVideo");
 
-  
+videoModal.addEventListener("show.bs.modal", function () {
+iframe.src = videoUrl;
+});
 
-
+videoModal.addEventListener("hidden.bs.modal", function () {
+iframe.src = ""; // stop video kad se zatvori modal
+});
 
 $(document).ready(function(){
     $(".owl-carousel").owlCarousel({
