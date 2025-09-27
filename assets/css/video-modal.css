@@ -1,0 +1,81 @@
+/* Wrapper modala */
+#lvideo-wrap {
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100dvh;
+    z-index: 9999; /* iznad navbar-a */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+#lvideo-wrap.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Overlay koji pokriva celu stranicu i hvata klik */
+.lvideo-overlay {
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100dvh;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 1000;
+    cursor: pointer;
+}
+
+/* Kontejner koji drži video */
+.lvideo-container {
+    position: relative;
+    z-index: 1010;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+}
+
+/* Video i iframe */
+iframe, video {
+    max-width: 1280px;
+    width: 90%;
+    aspect-ratio: 16/9;
+    border-radius: 12px;
+    box-shadow: 0 0 19px rgba(0,0,0,0.3);
+}
+
+/* Dugme za zatvaranje modala */
+.lvideo-close {
+    position: absolute;
+    top: 20px; 
+    right: 20px;
+    width: 40px; 
+    height: 40px;
+    background: #fff;
+    border: 2px solid var(--primary-color);
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1050;
+}
+
+/* Krstić unutar dugmeta */
+.lvideo-close:before, .lvideo-close:after {
+    content: "";
+    position: absolute;
+    width: 60%; 
+    height: 3px;
+    background-color: var(--primary-color);
+    top: 50%; 
+    left: 20%;
+}
+
+.lvideo-close:before { 
+    transform: rotate(45deg); 
+}
+
+.lvideo-close:after  { 
+    transform: rotate(-45deg); 
+}

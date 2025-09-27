@@ -1,41 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Personal Coaching</title>
-  <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LimitlessYou Gallery</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/video-modal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- Lightbox2 CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet" />
+
 </head>
 <body>
-    <nav id="navbar" class="navbar fixed-top navbar-expand-lg navbar-light bg-transparent py-3">
+    <!-- Navbar -->
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-transparent py-3">
         <div class="container">
-            <a class="navbar-brand" href="#">Logo</a>
+            <a class="navbar-brand text-white" href="#">Limitless<span class="text-primary">You</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav gap-2 ms-auto">
-                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-                <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+            <ul class="navbar-nav gap-4 ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home&nbsp;<i class="bi bi-arrow-up-right"></i></a></li>
+                <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery&nbsp;<i class="bi bi-arrow-up-right"></i></a></li>
+                <li class="nav-item"><a class="nav-link" href="blog.html">Blog&nbsp;<i class="bi bi-arrow-up-right"></i></a></li>
             </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Hero sekcija -->
 
+    <section class="hero-gallery">
+        <div class="hero-gallery-content">
+            <h1 class="mx-5">Moments of Strength, Progress, and Transformation</h1>
+        </div>
+    </section>
 
+    <!-- Gallery Tabs -->
+    <section id="gallery-section">
+        <div class="container py-5">
+        
+            
+            <ul class="nav nav-tabs justify-content-center gap-1" id="galleryTabs" role="tablist">
+                <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#all" type="button">All</button></li>
+                <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#photos" type="button">Photos</button></li>
+                <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#videos" type="button">Videos</button></li>
+                <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#beforeafter" type="button">Before/After</button></li>
+            </ul>
+
+            <div class="tab-content">
+
+                <!-- ALL -->
+                <div class="tab-pane fade show active" id="all">
+                    <!-- Photos -->
+                    <h4 class="section-title">Photos</h4>
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <a href="assets/images/gallery/galleryImg1.jpg" data-lightbox="photos-all" data-title="Photo 1">
+                                <img src="assets/images/gallery/galleryImg1.jpg" class="img-fluid gallery-item">
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a href="assets/images/gallery/galleryImg2.jpg" data-lightbox="photos-all" data-title="Photo 2">
+                                <img src="assets/images/gallery/galleryImg2.jpg" class="img-fluid gallery-item">
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a href="assets/images/gallery/galleryImg3.jpg" data-lightbox="photos-all" data-title="Photo 3">
+                                <img src="assets/images/gallery/galleryImg3.jpg" class="img-fluid gallery-item">
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a href="assets/images/gallery/galleryImg4.jpg" data-lightbox="photos-all" data-title="Photo 4">
+                                <img src="assets/images/gallery/galleryImg4.jpg" class="img-fluid gallery-item">
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a href="assets/images/gallery/galleryImg5.jpg" data-lightbox="photos-all" data-title="Photo 5">
+                                <img src="assets/images/gallery/galleryImg5.jpg" class="img-fluid gallery-item">
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a href="assets/images/gallery/galleryImg6.jpg" data-lightbox="photos-all" data-title="Photo 6">
+                                <img src="assets/images/gallery/galleryImg6.jpg" class="img-fluid gallery-item">
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Videos -->
+                    <h4 class="section-title">Videos</h4>
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <a href="#" class="lvideo" data-url="https://www.youtube.com/watch?v=FeR-4_Opt-g">
+                            <img src="https://img.youtube.com/vi/FeR-4_Opt-g/hqdefault.jpg" class="img-fluid gallery-item" alt="YouTube Video">
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a href="#" class="lvideo" data-url="/videos/fitness2.mp4">
+                            <img src="/videos/thumbnails/fitness2.jpg" class="img-fluid gallery-item" alt="Local Video 2">
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a href="#" class="lvideo" data-url="https://vimeo.com/76979871">
+                            <img src="https://i.vimeocdn.com/video/452001751_640.jpg" class="img-fluid gallery-item" alt="Vimeo Video">
+                            </a>
+                        </div>
+                    </div>
+
+                        <!-- Modal Wrapper -->
+                    
+
+                    <!-- Before/After -->
+                    <h4 class="section-title">Before/After</h4>
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <a href="assets/images/gallery/before-after1.jpg" data-lightbox="before-after-all" data-title="Photo 1">
+                                <img src="assets/images/gallery/before-after1.jpg" class="img-fluid gallery-item">
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a href="assets/images/gallery/before-after2.jpg" data-lightbox="before-after-all" data-title="Photo 2">
+                                <img src="assets/images/gallery/before-after2.jpg" class="img-fluid gallery-item">
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a href="assets/images/gallery/before-after3.jpg" data-lightbox="before-after-all" data-title="Photo 3">
+                                <img src="assets/images/gallery/before-after3.jpg" class="img-fluid gallery-item">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Only Photos -->
+                <div class="tab-pane fade" id="photos">
+                    <div class="row g-4 mt-3">
+                        <div class="col-md-4">
+                            <a href="assets/images/gallery/galleryImg1.jpg" data-lightbox="photos" data-title="Photo 1">
+                                <img src="assets/images/gallery/galleryImg1.jpg" class="img-fluid gallery-item">
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a href="assets/images/gallery/galleryImg2.jpg" data-lightbox="photos" data-title="Photo 2">
+                                <img src="assets/images/gallery/galleryImg2.jpg" class="img-fluid gallery-item">
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a href="assets/images/gallery/galleryImg3.jpg" data-lightbox="photos" data-title="Photo 3">
+                                <img src="assets/images/gallery/galleryImg3.jpg" class="img-fluid gallery-item">
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a href="assets/images/gallery/galleryImg4.jpg" data-lightbox="photos" data-title="Photo 4">
+                                <img src="assets/images/gallery/galleryImg4.jpg" class="img-fluid gallery-item">
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a href="assets/images/gallery/galleryImg5.jpg" data-lightbox="photos" data-title="Photo 5">
+                                <img src="assets/images/gallery/galleryImg5.jpg" class="img-fluid gallery-item">
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a href="assets/images/gallery/galleryImg6.jpg" data-lightbox="photos" data-title="Photo 6">
+                                <img src="assets/images/gallery/galleryImg6.jpg" class="img-fluid gallery-item">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Only Videos -->
+                <div class="tab-pane fade" id="videos">
+                    <div class="row g-4 mt-3">
+                        <div class="col-md-4">
+                            <a href="https://www.youtube.com/embed/dQw4w9WgXcQ" data-lightbox="videos-all" data-title="Workout Video" data-lightbox-type="iframe">
+                                <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg" class="img-fluid gallery-item" alt="YouTube">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Only Before/After -->
+                <div class="tab-pane fade" id="beforeafter">
+                    <div class="row g-4 mt-3">
+                        <div class="col-md-4">
+                            <a href="assets/images/gallery/before-after1.jpg" data-lightbox="before-after" data-title="Photo 1">
+                                <img src="assets/images/gallery/before-after1.jpg" class="img-fluid gallery-item">
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a href="assets/images/gallery/before-after2.jpg" data-lightbox="before-after" data-title="Photo 2">
+                                <img src="assets/images/gallery/before-after2.jpg" class="img-fluid gallery-item">
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a href="assets/images/gallery/before-after3.jpg" data-lightbox="before-after" data-title="Photo 3">
+                                <img src="assets/images/gallery/before-after3.jpg" class="img-fluid gallery-item">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    
+    <div id="lvideo-wrap"></div>
     <!-- Footer -->
-    <footer class="bg-dark text-light pt-5 pb-4 mt-5">
+    <footer class="bg-dark text-light pt-5 pb-4">
         <div class="container">
             <div class="row gy-4">
 
                 <!-- Logo & description -->
                 <div class="col-md-4">
-                    <h5 class="fw-bold mb-3">LimitlessYou</h5>
+                    <h5 class="fw-bold mb-3">Limitless<span class="text-primary">You</span></h5>
                     <p class="small text-muted">
                     Unlock your full potential uz naše personalizovane coaching programe. 
                     Fokus na tvoj rast, zdravlje i balans u životu.
@@ -49,7 +229,7 @@
                 </div>
 
                 <!-- Quick Links -->
-                <div class="col-md-2">
+                <div class="col-6 col-md-2 offset-md-3">
                     <h6 class="fw-bold mb-3">Brzi linkovi</h6>
                     <ul class="list-unstyled small">
                     <li><a href="#home" class="text-decoration-none text-muted">Home</a></li>
@@ -61,24 +241,16 @@
                 </div>
 
                 <!-- Contact -->
-                <div class="col-md-3">
+                <div class="col-6 col-md-3">
                     <h6 class="fw-bold mb-3">Kontakt</h6>
                     <ul class="list-unstyled small text-muted">
                     <li><i class="bi bi-geo-alt-fill me-2"></i> Beograd, Srbija</li>
-                    <li><i class="bi bi-envelope-fill me-2"></i> info@LimitlessYou.com</li>
+                    <li><i class="bi bi-envelope-fill me-2"></i> info@limitless.com</li>
                     <li><i class="bi bi-phone-fill me-2"></i> +381 65 123 4567</li>
                     </ul>
                 </div>
 
-                <!-- Newsletter -->
-                <div class="col-md-3">
-                    <h6 class="fw-bold mb-3">Newsletter</h6>
-                    <p class="small text-muted">Prijavi se i dobijaj motivacione savete i ponude.</p>
-                    <form class="d-flex">
-                    <input type="email" class="form-control form-control-sm me-2 rounded-pill" placeholder="Email">
-                    <button class="btn btn-success btn-sm rounded-pill">OK</button>
-                    </form>
-                </div>
+           
             </div>
 
             <hr class="border-secondary my-4">
@@ -90,10 +262,23 @@
     </footer>
 
 
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
+    <script src="assets/bootstrap/bootstrap.bundle.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox-plus-jquery.min.js"></script>
 
-  <script src="assets/bootstrap/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/main.js"></script>
-
+    <!-- <script src="assets/js/main.js"></script> -->
+    <script src="assets/js/video-modal.js"></script>
+    <!-- Init Lightbox -->
+    <script>
+      lightbox.option({
+        'resizeDuration': 200,
+        'wrapAround': true,
+        'alwaysShowNavOnTouchDevices': true
+      });
+    </script>
 </body>
 </html>

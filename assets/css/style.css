@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
 }
+
 .text-primary{
     color: #00c6c2!important;
 }
@@ -144,8 +145,15 @@ a.btn-cta:hover{
   width: 100%; /* crta se širi do kraja */
 }
 
-.hero {
+.hero{
     background: url('../images/hero-section-image.jpg') no-repeat center center/cover;
+}
+
+.hero-gallery{
+    background: url('../images/gym-gallery.jpg') no-repeat center center/cover;
+}
+
+.hero, .hero-gallery {
     height: 100vh;
     display: flex;
     align-items: center;
@@ -155,7 +163,7 @@ a.btn-cta:hover{
     text-align: center;
 }
 
-.hero::before {
+.hero::before, .hero-gallery::before {
     content: "";
     position: absolute;
     top: 0; left: 0;
@@ -163,7 +171,7 @@ a.btn-cta:hover{
     background: rgba(0,0,0,0.5); /* tamni overlay */
 }
 
-.hero-content {
+.hero-content, .hero-gallery-content{
     position: relative;
     z-index: 2;
 }
@@ -450,6 +458,61 @@ a.btn-cta:hover{
     margin: 0 auto;
 }
 
+/* GALLERY SECTION */
+
+#gallery-section{
+    background-color: #0D0D0D;
+    color: #fff;
+    box-shadow: 0px 0px 25px 30px rgba(13,13,13,1);
+    -webkit-box-shadow: 0px 0px 25px 30px rgba(13,13,13,1);
+    -moz-box-shadow: 0px 0px 25px 30px rgba(13,13,13,1);
+    position: relative;
+    z-index: 2;
+}
+
+#gallery-section .nav .nav-item .nav-link{
+    color: #fff;
+    border:none!important;
+}
+
+#gallery-section .nav .nav-item .nav-link:hover{
+    border: none!important;
+}
+
+#gallery-section .nav .nav-item:hover .nav-link, #gallery-section .nav .nav-item .nav-link.active{
+    background: #00c6c2;
+    border: none!important;
+}
+
+#gallery-section .section-title{
+    margin-top: 80px;
+    margin-bottom: 30px;
+    position: relative;
+    padding-left: 15px; /* da tekst ne nalegne na liniju */
+    font-weight: 600;
+}
+
+#gallery-section .section-title::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;          /* debljina linije */
+    height: 60%;         /* visina linije */
+    background-color: #00c6c2; /* tvoja plava boja */
+    border-radius: 2px;
+}
+
+#gallery-section .tab-content img{
+    border-radius: 10px;
+    transition: all .3s ease;
+}
+
+#gallery-section .tab-content img:hover {
+    transform: scale(1.03);
+}
+
 @media (max-width: 992px){
     #statistics-section h3{
         width: 85%;
@@ -471,9 +534,16 @@ a.btn-cta:hover{
     #statistics-section h3{
         width: 100%;
     }
+    #video-section h2{
+        font-size: 72px;
+    }
 }
 @media (max-width:460px){
     #motivation-section h2{
+        font-size: 46px;
+    }
+
+    #video-section h2{
         font-size: 46px;
     }
 }

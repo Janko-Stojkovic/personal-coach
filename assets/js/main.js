@@ -83,3 +83,22 @@ $(document).ready(function(){
         }
     });
 });
+
+const body = document.body;
+let wrapper = document.getElementById("lvideo-wrap");
+
+// Ako ne postoji, kreiraj wrapper
+if (!wrapper) {
+  wrapper = document.createElement("div");
+  wrapper.id = "lvideo-wrap";
+  document.body.appendChild(wrapper);
+}
+
+document.querySelectorAll(".lvideo").forEach(el => {
+  el.addEventListener("click", function(e) {
+    e.preventDefault();
+    const url = this.dataset.url;
+    openVideo(url);
+  });
+});
+
